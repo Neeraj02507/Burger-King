@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Burger King</title>
+  <style>
+   
+      .about-section {
+      padding: 50px;
+       margin-top: 4%;
+    }
+
+    .about-section h2 {
+
+      font-size: 4em;
+      margin-bottom: 20px;
+    }
+
+    .about-section p {
+      font-size: 2em;
+      line-height: 1.6;
+    }
+    .infinite-swing {
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 10s;
+  }
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(174, 233, 241) 50%, #f88282 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+
+  </style>
+</head>
+  <section class="about-section">
+    <h2>About Us</h2>
+    <p>Burger King, founded in 1954, is the second largest fast food hamburger chain in the world. Our commitment is to offer high-quality, great-tasting, and affordable food. Burger King has always been about authenticity, innovation, and great taste.</p>
+    <p>From our iconic Whopper to flame-grilled burgers made your way, we strive to deliver real food made with real fire. With thousands of restaurants in over 100 countries, we are proud to serve our guests every day.</p>
+    <p>We believe in doing the right thing, including sourcing our ingredients responsibly, supporting our communities, and constantly evolving to serve our guests better.</p>
+  </section>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+
+</body>
+</html>

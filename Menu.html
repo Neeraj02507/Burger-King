@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.infinite-swing {
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 10s;
+  }
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg, rgb(241, 217, 174) 50%, #340a0a 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+    </style>
+</head>
+<body>
+    <nav style="text-align: center; font-size:40px;  ">
+        <h1 >Our Menu</h1>
+    </nav>
+   
+    <div class="menu">
+        <div style="text-align: center;">
+        <img style="width: 80%;" src="image/menu.jpg" alt="">
+        <img src="" alt="">
+    </div>
+    </div>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+</body>
+</html>

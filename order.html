@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Order section start here*/
+.recipe {
+  padding: 70px 0;
+  text-align: center;
+}
+.reservation-form {
+  max-width: 60%;
+  height: 700px;
+  margin: 0 auto;
+  background-color:  #e7b15f;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-form h1 {
+  color: black;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.reservation-form form input,
+.reservation-form form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: none;
+}
+
+.reservation-form form button {
+  display: inline-block;
+  background-color:  #ffffff;
+  color:black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form form button:hover {
+  background-color:  #e7b15f;
+}
+/*  
+background animation */
+.infinite-swing {
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    animation-duration: 10s;
+  }
+  .bg {
+    animation:slide 3s ease-in-out infinite alternate;
+    background-image: linear-gradient(-60deg,  rgb(174, 233, 241) 50%, #f88282 50%);
+    bottom:0;
+    left:-50%;
+    opacity:.5;
+    position:fixed;
+    right:-50%;
+    top:0;
+    z-index:-1;
+  }
+  
+  .bg2 {
+    animation-direction:alternate-reverse;
+    animation-duration:4s;
+  }
+  
+
+  
+  @keyframes slide {
+    0% {
+      transform:translateX(-25%);
+    }
+    100% {
+      transform:translateX(25%);
+    }
+  }
+    </style>
+</head>
+<body>
+    <!--  Order section start here -->
+  <section class="recipe">
+    <div class="reservation-form">
+      <h1>Order</h1>
+      <form>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <input type="rep" name="recipe" placeholder="Recipe name" required>
+        <textarea name="message" placeholder="Additional  ingredients  which you want to add" rows="5"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+  <!--  Order section end here -->
+    <!-- for background animation -->
+     <div class="bg"></div>
+     <div class="bg bg2"></div>
+</body>
+</html>

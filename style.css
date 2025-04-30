@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+/*header*/
+header {
+  background-color: #030303;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Burger king logo */
+.logo img {
+  height: 90px;
+  margin-left:40px;
+  border-radius: 50%;
+}
+ /*nav-Sidebar start*/
+ .sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;        /* start offscreen on right */
+  width: 150px;
+  /* height: 0%; */
+  color: white;
+  padding: 60px 20px;
+  transition: right 0.3s ease;
+  z-index: 2;
+}
+.sidebar.active {
+  right: 0;
+}
+.sidebar h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+.sidebar h1:hover{
+  padding-left: 5px;
+  color:  #ff0000;
+}
+.sidebar a {
+  display: block;
+  margin: 12px 0;
+  text-decoration:none;
+  color: white;
+  font-size: 20px;
+  transition: padding-left 0.2s;
+}
+.sidebar a:hover {
+  padding-left: 10px;
+  color: #ff0000;
+}
+.king {
+  position: fixed;
+  top: 20px;
+  right: 20px;       
+  width: 35px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 3;
+}
+.king span {
+  height: 4px;
+  background:#ff0000;
+  border-radius: 4px;
+  transition: transform 0.4s, opacity 0.4s;
+}
+.king.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.king.active span:nth-child(2) {
+  opacity: 0;
+}
+.king.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+/* nav-Slidebar end */
+
+/* Hero section start here */
+.hero {
+  background-image: url("image/hero.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  color:white;
+}
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+  margin-top :0px;
+  margin-left: 3%;
+  
+}
+.hero-content h1 {
+  font-size: 50px;
+  margin-bottom: 20px;
+ 
+}
+.hero-content h1:hover {
+  padding-left: 10px;
+  color: #ff0000;
+}
+.hero-content p {
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+.hero-content p:hover {
+  padding-left: 10px;
+  color: #ff0000;
+}
+.btn {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #f9f903;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.btn:hover {
+  padding-left: 10px;
+  background-color: #090909;
+}
+/* Hero section end here */
+
+/*about section start here*/
+.about {
+  display: flex;
+  align-items: center;
+  padding: 80px 0;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 50px;
+  color: #fff;
+  margin-left: 5%;
+  
+  
+}
+
+.about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.about-image {
+  max-width: 50%;
+  margin-right: 0%;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.dark-theme {
+  background-color: #070e16;
+}
+/* about section end here */
+
+/* hero1 section start here */
+.hero1 {
+  background-image: url("image/hero1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  /* display: flex; */
+}
+/* hero1 section end here */
+
+/* menu section start here*/
+.menu {
+  padding: 80px 0;
+  text-align: center;
+  background-color: #070e16;
+}
+
+.menu h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.menu-items {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item {
+  max-width: 300px;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.menu-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.menu-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.menu-item p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+/* menu section end here */
+
+/* Gallery scrolling section start here*/
+.gallery {
+  margin: 0;
+  font-family: sans-serif;
+  color: #fffefe;
+}
+
+.spacer {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: #000000;
+}
+
+.image-box {
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  border: none;
+  background:#040404;
+  padding: 10px;
+  transition: box-shadow 0.9s;
+}
+
+.image-box::-webkit-scrollbar {
+  display: none;
+}
+
+.image-box img {
+  width: 450px;
+  height: 350px;
+  margin-right: 10px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.image-box img:hover {
+  transform: scale(1.05);
+}
+/* Gallery scrolling section end here*/
+
+/* Order section start here*/
+.recipe {
+  background-color:  #030303;
+  padding: 70px 0;
+  text-align: center;
+}
+.reservation-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.reservation-form h2 {
+  color: #fff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.reservation-form form input,
+.reservation-form form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.reservation-form form button {
+  display: inline-block;
+  background-color:  #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-form form button:hover {
+  background-color:   #030303;
+}
+/* Order section end here*/
+
+/* Testimonials Section start here*/
+
+.testimonials {
+  padding: 80px 0;
+  text-align: center;
+  background-color:  #030303;
+}
+
+.testimonials h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  text-align: left;
+}
+
+.testimonial img {
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+}
+
+.testimonial p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.testimonial h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+/* Testimonials Section end here*/
+
+
+/* Footer*/
+
+.footer {
+  background-color: #030303;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  border-radius: 50%;
+}
+
+.footer-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer-text {
+  padding: 20px;
+  font-size: 14px;
+}
